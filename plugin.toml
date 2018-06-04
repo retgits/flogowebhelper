@@ -1,4 +1,4 @@
 [[plugin]]
-name = "flogoweb"
+name = "flogowebloader"
 repository = "https://github.com/retgits/flogowebloader"
-files = ["flogowebloader.go","cmd/test.txt"]
+files = ["cmd/flogowebloader.go"]
