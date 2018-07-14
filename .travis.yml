@@ -1,0 +1,24 @@
+language: go
+
+go:
+  - master
+
+install:
+  - go get ./...
+  
+script:
+  - go build -o ./bin/flogowebhelper
+  - GOOS=darwin mage -compile ./bin/flogowebhelper-macos
+  - GOOS=windows mage -compile ./bin/flogowebhelper-win.exe
+
+deploy:
+  provider: releases
+  api_key: $GITHUB_TOKEN
+  overwrite: true
+  file:
+    - "./bin/flogowebhelper"
+    - "./bin/flogowebhelper-macos"
+    - "./bin/flogowebhelper-win.exe"
+  skip_cleanup: true
+  on:
+    tags: true
