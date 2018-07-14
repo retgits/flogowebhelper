@@ -8,8 +8,8 @@ install:
   
 script:
   - go build -o ./bin/flogowebhelper
-  - GOOS=darwin mage -compile ./bin/flogowebhelper-macos
-  - GOOS=windows mage -compile ./bin/flogowebhelper-win.exe
+  - GOOS=darwin go build -o ./bin/flogowebhelper-macos
+  - GOOS=windows go build -o ./bin/flogowebhelper-win.exe
 
 deploy:
   provider: releases
