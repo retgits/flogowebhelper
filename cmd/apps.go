@@ -5,7 +5,7 @@ package cmd
 import (
 	"fmt"
 
-	"github.com/retgits/flogowebloader/util"
+	"github.com/retgits/flogowebhelper/util"
 	"github.com/spf13/cobra"
 )
 
@@ -53,5 +53,5 @@ func runApps(cmd *cobra.Command, args []string) {
 		}
 	}
 
-	fmt.Printf("\nRun 'flogowebloader help apps [command]' for more details\n\n")
+	fmt.Printf("\nRun 'flogowebhelper help apps [command]' for more details\n\n")
 }

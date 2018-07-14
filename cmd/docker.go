@@ -5,7 +5,7 @@ package cmd
 import (
 	"fmt"
 
-	"github.com/retgits/flogowebloader/util"
+	"github.com/retgits/flogowebhelper/util"
 	"github.com/spf13/cobra"
 )
 
@@ -41,5 +41,5 @@ func runDocker(cmd *cobra.Command, args []string) {
 		}
 	}
 
-	fmt.Printf("\nRun 'flogowebloader help docker [command]' for more details\n\n")
+	fmt.Printf("\nRun 'flogowebhelper help docker [command]' for more details\n\n")
 }

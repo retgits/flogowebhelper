@@ -12,7 +12,7 @@ go build
 CLI to interact with the Project Flogo Web UI
 
 Usage:
-  flogowebloader [command]
+  flogowebhelper [command]
 
 Available Commands:
   apps        Apps management for the Project Flogo Web UI
@@ -20,9 +20,9 @@ Available Commands:
   help        Help about any command
 
 Flags:
-  -h, --help   help for flogowebloader
+  -h, --help   help for flogowebhelper
 
-Use "flogowebloader [command] --help" for more information about a command.
+Use "flogowebhelper [command] --help" for more information about a command.
 ```
 
 ### apps
@@ -39,7 +39,7 @@ import................... Imports Flogo apps into the Flogo Web UI
 Exports Flogo apps from the Flogo Web UI
 
 Usage:
-  flogowebloader apps export [flags]
+  flogowebhelper apps export [flags]
 
 Flags:
   -h, --help          help for export
@@ -51,7 +51,7 @@ Flags:
 Imports Flogo apps into the Flogo Web UI
 
 Usage:
-  flogowebloader apps import [flags]
+  flogowebhelper apps import [flags]
 
 Flags:
       --dir               import all JSON files in the current directory
@@ -75,7 +75,7 @@ start.................... Starts a new instance of the Flogo Web UI with default
 Starts a new instance of the Flogo Web UI with default settings
 
 Usage:
-  flogowebloader docker start [flags]
+  flogowebhelper docker start [flags]
 
 Flags:
   -h, --help           help for start
@@ -87,7 +87,7 @@ Flags:
 Pulls the latest version of the Flogo Web UI from Docker Hub
 
 Usage:
-  flogowebloader docker latest [flags]
+  flogowebhelper docker latest [flags]
 
 Flags:
   -h, --help   help for latest
@@ -98,7 +98,7 @@ Flags:
 Builds a new docker image
 
 Usage:
-  flogowebloader docker build [flags]
+  flogowebhelper docker build [flags]
 
 Flags:
   -h, --help             help for build

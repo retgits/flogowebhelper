@@ -11,7 +11,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/retgits/flogowebloader/util"
+	"github.com/retgits/flogowebhelper/util"
 	"github.com/spf13/cobra"
 )
 

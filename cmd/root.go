@@ -1,5 +1,5 @@
 // Package cmd defines and implements command-line commands and flags
-// used by flogowebloader. Commands and flags are implemented using Cobra.
+// used by flogowebhelper. Commands and flags are implemented using Cobra.
 package cmd
 
 import (
@@ -11,7 +11,7 @@ import (
 
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
-	Use:   "flogowebloader",
+	Use:   "flogowebhelper",
 	Short: "CLI to interact with the Project Flogo Web UI",
 }
 
