@@ -1,4 +1,0 @@
-[[plugin]]
-name = "flogowebloader"
-repository = "https://github.com/retgits/flogowebloader"
-files = ["cmd/flogowebloader.go"]

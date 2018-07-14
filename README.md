@@ -1,23 +1,112 @@
-# Flogo Web UI - Loader
+# Flogo Web UI - Helper
 
-Flogo Web UI - Loader is a utility to load Flogo apps into the Flogo Web UI using the commandline as opposed to using the import button. Especially when creating a new docker image, it helps to speed up the process of loading apps considerably.
+Flogo Web UI - Helper is a utility to help work with the Flogo Web UI. Especially tasks like importing and exporting apps are considerably easier...
 
 You can build an executable out of this app using the command
 ```
 go build
 ```
 
-## Usage of the app:
+## Usage
 ```
-$ flogowebloader [-dir | -filename] [-host]
+CLI to interact with the Project Flogo Web UI
 
-  -dir
-        Upload all JSON files in the current directory
-  -filename string
-        The name of the file you want to upload if you do not specify 'dir' (default "flogo.json")
-  -host string
-        The URL for Flogo Web UI (default "http://localhost:3303")
+Usage:
+  flogowebloader [command]
+
+Available Commands:
+  apps        Apps management for the Project Flogo Web UI
+  docker      Docker container management for the Project Flogo Web UI
+  help        Help about any command
+
+Flags:
+  -h, --help   help for flogowebloader
+
+Use "flogowebloader [command] --help" for more information about a command.
 ```
+
+### apps
+```
+The Apps command supports the app management capabilities.
+The commands available are:
+
+export................... Exports Flogo apps from the Flogo Web UI
+import................... Imports Flogo apps into the Flogo Web UI
+```
+
+### apps - export
+```
+Exports Flogo apps from the Flogo Web UI
+
+Usage:
+  flogowebloader apps export [flags]
+
+Flags:
+  -h, --help          help for export
+      --host string   The URL for the Flogo Web UI (default "http://localhost:3303")
+```
+
+### apps - import
+```
+Imports Flogo apps into the Flogo Web UI
+
+Usage:
+  flogowebloader apps import [flags]
+
+Flags:
+      --dir               import all JSON files in the current directory
+      --filename string   The name of the file you want to import if you do not specify 'dir' (default "flogo.json")
+  -h, --help              help for import
+      --host string       The URL for the Flogo Web UI (default "http://localhost:3303")
+```
+
+### docker
+```
+The Docker command supports the container management capabilities.
+The commands available are:
+
+build.................... Builds a new docker image
+latest................... Pulls the latest version of the Flogo Web UI from Docker Hub
+start.................... Starts a new instance of the Flogo Web UI with default settings
+```
+
+### docker - start
+```
+Starts a new instance of the Flogo Web UI with default settings
+
+Usage:
+  flogowebloader docker start [flags]
+
+Flags:
+  -h, --help           help for start
+      --image string   The image name for the Flogo Web UI container (default "flogo/flogo-docker")
+```
+
+### docker - latest
+```
+Pulls the latest version of the Flogo Web UI from Docker Hub
+
+Usage:
+  flogowebloader docker latest [flags]
+
+Flags:
+  -h, --help   help for latest
+```
+
+### docker - build
+```
+Builds a new docker image
+
+Usage:
+  flogowebloader docker build [flags]
+
+Flags:
+  -h, --help             help for build
+      --image string     The image name for the Flogo Web UI container (default "flogo/flogo-docker")
+      --imports string   An imports file in case you want to add additional activities (like /home/user/Downloads/imports.go)
+```
+
+_Check out [this example](https://github.com/retgits/dockerfiles/blob/master/flogoweb/imports.go) of an imports.go_
 
 ## License
 The MIT License (MIT)
