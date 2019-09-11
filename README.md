@@ -1,5 +1,7 @@
 # Flogo Web UI - Helper
 
+_This code is no longer maintained. Feel free to fork and use it if you want though :smile:_
+
 Flogo Web UI - Helper is a utility to help work with the Flogo Web UI. Especially tasks like importing and exporting apps are considerably easier...
 
 You can build an executable out of this app using the command
